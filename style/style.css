@@ -4,3 +4,13 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+
+h1 {
+    color: #31A5AC;
+}
+
+.bg-color {
+    background: #DCDCDC;
+    border: none;
+    border-radius: 5px;
+}
