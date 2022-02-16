@@ -1,20 +1,5 @@
-// document.getElementById('calculat-btn').addEventListener('click',function(){
 
-//   const totalIncome = document.getElementById('income').value ;
-//   const foodCost = document.getElementById('food-cost').value;
-//   const rentCost = document.getElementById('rent-cost').value;
-//   const clothesCost = document.getElementById('clothes-cost').value;
-//   let totalcost = parseFloat(foodCost) + parseFloat(rentCost)+ parseFloat(clothesCost);
- 
-// const totalExpenses = document.getElementById('total-expenses').innerText = totalcost;
-
-
-// let remainExpense = parseFloat(totalIncome) - totalExpenses;
-// const balance = document.getElementById('total-balance').innerText = remainExpense;
-
-// return;
-// })
-function onClick(clickId){
+function calculat(clickId){
     document.getElementById(clickId).addEventListener('click',function(){
         const totalIncome = document.getElementById('income').value ;
         const foodCost = document.getElementById('food-cost').value;
@@ -30,7 +15,7 @@ function onClick(clickId){
     //  if the balance is short than income
 
       if( totalExpenses > totalIncome ){
-          alert("in suficance balance");
+          alert("Insufficient balance !");
           let balance = document.getElementById('total-balance').innerText;
           let reasin = document.getElementById('total-balance').innerText = 0;
    }
@@ -39,12 +24,16 @@ function onClick(clickId){
     if(isNaN(totalIncome + rentCost + foodCost + clothesCost ) == true){
         alert("Enter only number !");
     }
-  
 
       return;
     })
+}
+calculat( 'calculat-btn');
+// saving calculation
 
-    document.getElementById(clickId).addEventListener('click',function(){
+function saving(saveId){
+
+    document.getElementById(saveId).addEventListener('click',function(){
 
         const totalIncome = document.getElementById('income').value ;
         const persent = document.getElementById('save-money').value;
@@ -57,13 +46,14 @@ function onClick(clickId){
     const reaminBalance = document.getElementById('remaining-balance').innerText=saveBalance;
     
     })
-
-   
 }
+saving( 'save-btn');
+   
 
 
-onClick( 'calculat-btn');
-onClick( 'save-btn');
+
+
+
 
    
 
