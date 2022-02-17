@@ -44,6 +44,18 @@ function saving(saveId){
       const balance = document.getElementById('total-balance').innerText;
      let saveBalance = parseFloat(balance) -  parseFloat(savingAmount);
     const reaminBalance = document.getElementById('remaining-balance').innerText=saveBalance;
+   
+    // remaining balance 
+    if( reaminBalance < 0 ){
+     let remain =  document.getElementById('remaining-balance').innerText;
+    //  console.log(remain) ;
+     let reasin = document.getElementById('remaining-balance').innerText= "Not enough money !";
+    }
+//  saving error handle 
+if(isNaN(persent) == true ){
+  alert("Enter only number and not up to 20 % !");
+}
+
     
     })
 }
