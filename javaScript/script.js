@@ -24,11 +24,29 @@ function calculat(clickId){
     if(isNaN(totalIncome + rentCost + foodCost + clothesCost ) == true){
         alert("Enter only number !");
     }
+    // positive number only
 
-      return;
+    if( totalIncome < 0 ){
+        alert("Enter positive  number !");
+    }
+    if( rentCost < 0 ){
+        alert("Enter positive  number !");
+    }
+    if( foodCost < 0 ){
+        alert("Enter positive  number !");
+    }
+    if( clothesCost < 0 ){
+        alert("Enter positive  number !");
+    }
+
+      return ;
     })
 }
+
 calculat( 'calculat-btn');
+
+
+
 // saving calculation
 
 function saving(saveId){
